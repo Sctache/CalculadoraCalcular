@@ -1,12 +1,11 @@
 #Operações utilizando Funções
 def processos (parametro_operacao, lista):
     if parametro_operacao == '+':
-        soma_numeros = sum(lista)
-        print(f'A soma entre esses números é {soma_numeros}')
+        numero_final = sum(lista)
 
     elif parametro_operacao == '-':
         k = 'j'
+        numero_final = 0
 
-    return 'Operação Realizada!'
-
+    return numero_final
 #Consertar erro de Importação Circular!
