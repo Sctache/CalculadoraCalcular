@@ -4,8 +4,10 @@ def processos (parametro_operacao, lista):
         numero_final = sum(lista)
 
     elif parametro_operacao == '-':
-        k = 'j'
-        numero_final = 0
+        x = lista[0]
+        for i in lista[1:]:
+            subtraindo = x - i
+            x = subtraindo
+        numero_final = x
 
     return numero_final
-#Consertar erro de Importação Circular!
