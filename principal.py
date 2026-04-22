@@ -11,6 +11,13 @@ while True:
 
         if apagar_resultado.lower() == 'sim':
             lista_numeros.clear()
+
+            #Criar comando para que a calculadora pare de rodar
+            parar = input('Você deseja parar de usar a calculadora?\n')
+            if parar.lower().strip() == 'sim':
+                print('Saída realizada com sucesso!')
+                break
+
             #Criar um input no qual o usuário sinalize qual operação deseje realizar (1 por vez)   
             operacao = input('(+, -, x, /)\nDigite a operação que você deseja realizar (1 por vez):')
             while True:
@@ -20,6 +27,7 @@ while True:
                 numeros_individuo = float(numeros_individuo)
                 lista_numeros.append(numeros_individuo)
                 print(lista_numeros)
+                
             #Ativar a função de processos (operações):
             resultado = float(cl.processos(operacao, lista_numeros))
             print(resultado)

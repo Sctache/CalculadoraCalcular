@@ -10,4 +10,11 @@ def processos (parametro_operacao, lista):
             x = subtraindo
         numero_final = x
 
+    elif parametro_operacao == 'x':
+        y = lista[0]
+        for i in lista[1:]:
+            multiplicando = y * i
+            y = multiplicando
+        numero_final = y
+
     return numero_final
