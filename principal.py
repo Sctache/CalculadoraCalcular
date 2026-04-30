@@ -20,22 +20,55 @@ while True:
 
             #Criar um input no qual o usuário sinalize qual operação deseje realizar (1 por vez)   
             operacao = input('(+, -, x, /)\nDigite a operação que você deseja realizar (1 por vez):')
-            while True:
-                numeros_individuo = str(input('Quando finalizar, basta digitar "."\nDigite 1 número por vez NA ORDEM que você deseja para realizar a operação:'))
-                if numeros_individuo == '.':
-                    break
-                numeros_individuo = float(numeros_individuo)
-                lista_numeros.append(numeros_individuo)
-                print(lista_numeros)
+
+            if operacao == '/':
+                resultado = float(cl.processos(operacao, lista_numeros))
+                print(resultado)
+
+            if operacao != '/':
+
+                while True:
+                    numeros_individuo = str(input('Quando finalizar, basta digitar "."\nDigite 1 número por vez NA ORDEM que você deseja para realizar a operação:'))
+                    if numeros_individuo == '.':
+                        break
+                    numeros_individuo = float(numeros_individuo)
+                    lista_numeros.append(numeros_individuo)
+                    print(lista_numeros)
                 
-            #Ativar a função de processos (operações):
-            resultado = float(cl.processos(operacao, lista_numeros))
-            print(resultado)
+                #Ativar a função de processos (operações):
+                resultado = float(cl.processos(operacao, lista_numeros))
+                print(resultado)
 
         elif apagar_resultado.lower() == 'não' or 'nao':
             lista_numeros.clear()
             lista_numeros.append(resultado)
             operacao = input('(+, -, x, /)\nDigite a operação que você deseja realizar (1 por vez):')
+
+            if operacao == '/':
+                resultado = float(cl.processos(operacao, lista_numeros))
+                print(resultado)
+
+            if operacao != '/':
+                while True:
+                    numeros_individuo = str(input('Quando finalizar, basta digitar "."\nDigite 1 número por vez NA ORDEM que você deseja para realizar a operação:'))
+                    if numeros_individuo == '.':
+                        break
+                    numeros_individuo = float(numeros_individuo)
+                    lista_numeros.append(numeros_individuo)
+                    print(lista_numeros)
+                #Ativar a função de processos (operações):
+                resultado = float(cl.processos(operacao, lista_numeros))
+                print(resultado)
+    
+    if resultado == 0:
+        #Criar um input no qual o usuário sinalize qual operação deseje realizar (1 por vez)   
+        operacao = input('(+, -, x, /)\nDigite a operação que você deseja realizar (1 por vez):')
+        
+        if operacao == '/':
+            resultado = float(cl.processos(operacao,lista_numeros))
+            print(resultado)
+
+        elif operacao != '/':
             while True:
                 numeros_individuo = str(input('Quando finalizar, basta digitar "."\nDigite 1 número por vez NA ORDEM que você deseja para realizar a operação:'))
                 if numeros_individuo == '.':
@@ -46,17 +79,3 @@ while True:
             #Ativar a função de processos (operações):
             resultado = float(cl.processos(operacao, lista_numeros))
             print(resultado)
-    
-    if resultado == 0:
-        #Criar um input no qual o usuário sinalize qual operação deseje realizar (1 por vez)   
-        operacao = input('(+, -, x, /)\nDigite a operação que você deseja realizar (1 por vez):')
-        while True:
-            numeros_individuo = str(input('Quando finalizar, basta digitar "."\nDigite 1 número por vez NA ORDEM que você deseja para realizar a operação:'))
-            if numeros_individuo == '.':
-                break
-            numeros_individuo = float(numeros_individuo)
-            lista_numeros.append(numeros_individuo)
-            print(lista_numeros)
-        #Ativar a função de processos (operações):
-        resultado = float(cl.processos(operacao, lista_numeros))
-        print(resultado)
