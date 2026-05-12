@@ -6,7 +6,7 @@ resultado = float(0)
 while True:
 
     #Criar comando para que o código puxe o resultado encontrado anteriormente
-    if resultado != 0:
+    if lista_numeros != []:
         apagar_resultado = input(f'Você deseja que o resultado {resultado} seja apagado?\nSim/Não\n')
 
         if apagar_resultado.lower() == 'sim':
@@ -60,7 +60,7 @@ while True:
                 resultado = float(cl.processos(operacao, lista_numeros))
                 print(resultado)
     
-    if resultado == 0:
+    if lista_numeros == []:
         #Criar um input no qual o usuário sinalize qual operação deseje realizar (1 por vez)   
         operacao = input('(+, -, x, /)\nDigite a operação que você deseja realizar (1 por vez):')
         
